@@ -4,32 +4,13 @@
 *
 */
 
-.fade-enter-active {
-  transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
-  // animation: fade .5s;
-}
-
-// leave の継続状態。トランジションが終わるフェーズ中に適用
-// leave がトリガされるとき追加され、トランジション/アニメーションが終了すると削除
-// 削除シーンの期間、遅延、イージングを定義
-.fade-leave-active {
-  transition: all 1s cubic-bezier(0.895, 0.03, 0.685, 0.22);
-  // animation: fade .5s reverse;
-}
-
-//  enter の開始状態。
-//  要素が挿入される前に適用され、要素が挿入された 1 フレーム後に削除
-//  要素の登場シーンのスタイルがここ
-.fade-enter {
+.before-enter {
   opacity: 0;
-  transform: translateX(-100%);
+  transform: translateY(150px);
+  transition: all 1.3s ease;
 }
 
-// leave の終了状態
-// トランジションの終了がトリガされた後に (同時に v-leave 削除) 1フレーム追加
-// トランジション/アニメーションが終了すると削除
-// 要素の削除シーンのスタイルがここ
-.fade-leave-to {
-  opacity: 0;
-  transform: translateX(100%);
+.enter {
+  opacity: 1;
+  transform: translateY(0);
 }
