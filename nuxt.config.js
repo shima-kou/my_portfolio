@@ -3,12 +3,12 @@ export default {
   head: {
     title: "portfolio_blog",
     htmlAttrs: {
-      lang: "en"
+      lang: "ja"
     },
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { hid: "description", name: "description", content: "" }
+      { hid: "description", name: "description", content: "my web site" }
     ],
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
   },
@@ -17,7 +17,7 @@ export default {
   css: ["@/assets/scss/main.scss", "@/assets/scss/animation.scss"],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [{ src: "@/plugins/scrollInview.js" }],
+  plugins: [{ src: "@/plugins/animateOnScroll.client.js" }],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
